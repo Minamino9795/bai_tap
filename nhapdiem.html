@@ -1,0 +1,36 @@
+
+     <!DOCTYPE html>
+     <html lang="en">
+     <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+     </head>
+     <body>
+        <h1>Tính điểm trung bình</h1>
+        <lable for="diemVatLy"> Điểm Vật Lý</lable>
+        <input type="number" id="diemVatLy"><br>
+
+        <label for="diemHoaHoc">Điểm Hóa Học</label>
+        <input type="number" id="diemHoaHoc"><br>
+
+        <lable for="diemSinhHoc">Điểm Sinh Học</lable>
+        <input type="number" id="diemSinhHoc"><br>
+        
+        <button onclick="button1()">click</button>
+     </body>
+     <script>
+        function button1(){
+        var diemvatly=parseFloat(document.getElementById("diemVatLy").value);
+        var diemhoahoc=parseFloat(document.getElementById("diemHoaHoc").value);
+        var diemsinhhoc=parseFloat(document.getElementById("diemSinhHoc").value);
+    
+        var tongdiem= diemvatly+diemhoahoc+diemsinhhoc;
+        var diemtrungbinh=tongdiem / 3;
+        document.write("Tổng điểm:="+tongdiem);
+        document.write("</br>");
+        document.write("Điểm Trung Bình:="+ diemtrungbinh);
+        }
+     </script>
+     </html>
