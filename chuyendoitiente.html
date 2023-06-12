@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form method="get" action="">
+        <label for="giatri">Amount</label><br>
+        <input type="number" id="amount" min="0"><br>
+        <label for="chuyendoi1">From Currency</label>
+        <select name="donvi1" id="from_currency">
+            <option value="vnd" id="VND">vnd</option>
+            <option value="usd" id="USD">usd</option>
+        </select>
+        <label for="chuyendoi2">To Currency</label>
+        <select name="donvi2" id="to_currency">
+            <option value="vnd" id="VND">vnd</option>
+            <option value="usd" id="USD">usd</option>
+        </select>
+        <button onclick="button1()">convert</button>
+        <script>
+            var amount = parseInt(document.getElementById("amount").value);
+            var from_currency = parseInt(document.getElementById("from_currency").value);
+            var to_currency = parseInt(document.getElementById("to_currency").value);
+            
+            var usd = amount / 23000;
+            var vnd = amount * 23000;
+            function button1() {
+                if (from_currency=="VND" && to_currency=="USD") {
+                    document.write("số tiền="+ usd);
+                }
+                else
+                if (from_currency=="USD" && to_currency=="VND"){
+                    document.write("số tiền="+ vnd);
+                }
+                    
+            }
+
+        </script>
+    </form>
+
+</body>
+
+</html>
