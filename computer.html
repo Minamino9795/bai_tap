@@ -8,38 +8,44 @@
 </head>
 
 <body>
+
+    <h1>Caculator</h1>
     <label for="number1"></label>
     <input type="number" id="number1" value="">
     <label for="number2"></label>
     <input type="number" id="number2" value=""><br>
-    <button onclick="addition()"id="summation">addition(+)</button>
-    <button onclick="subtraction()"id="subtraction">subtraction(-)</button>
+    <button onclick="addition()" id="summation">addition(+)</button>
+    <button onclick="subtraction()" id="subtraction">subtraction(-)</button>
     <button onclick="multiplication()" id="multiplication">multiplication(*)</button>
-    <button onclick="division()"id="division">division(/)</button>
+    <button onclick="division()" id="division">division(/)</button>
+    <p id="ketqua"></p>
     <script>
-        function addition(){
-            let so1 =parseInt(document.getElementById("number1").value);
-            let so2=parseInt(document.getElementById("number2").value);
-            let summation= so1 + so2;
-            document.write("kết quả ="+ summation);
+        function addition() {
+            let so1 = parseInt(document.getElementById("number1").value);
+            let so2 = parseInt(document.getElementById("number2").value);
+            let summation = so1 + so2;
+            document.getElementById("ketqua").innerHTML = 'kết quả = ' + summation;
         }
-        function subtraction(){
-            let so1 =parseInt(document.getElementById("number1").value);
-            let so2=parseInt(document.getElementById("number2").value);
-            let subtraction= so1 - so2;
-            document.write("kết quả ="+ subtraction);
+        function subtraction() {
+            let so1 = parseInt(document.getElementById("number1").value);
+            let so2 = parseInt(document.getElementById("number2").value);
+            let subtraction = so1 - so2;
+            document.getElementById("ketqua").innerHTML = 'kết quả = ' + subtraction;
         }
-        function multiplication(){
-            let so1 =parseInt(document.getElementById("number1").value);
-            let so2=parseInt(document.getElementById("number2").value);
-            let multiplication= so1 * so2;
-            document.write("kết quả ="+ multiplication);
+            
+        function multiplication() {
+            let so1 = parseInt(document.getElementById("number1").value);
+            let so2 = parseInt(document.getElementById("number2").value);
+            let multiplication = so1 * so2;
+            document.getElementById("ketqua").innerHTML = 'kết quả = ' + multiplication;
+            
         }
-        function division(){
-            let so1 =parseInt(document.getElementById("number1").value);
-            let so2=parseInt(document.getElementById("number2").value);
-            let division= so1 / so2;
-            document.write("kết quả ="+ division);
+        function division() {
+            let so1 = parseInt(document.getElementById("number1").value);
+            let so2 = parseInt(document.getElementById("number2").value);
+            let division = so1 / so2;
+            document.getElementById("ketqua").innerHTML = 'kết quả = ' + division;
+           
         }
     </script>
 </body>
