@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // Nhập vào hai số a và b, và kiểm tra xem a có chia hết cho b hay không
+        var a = parseInt(prompt("nhap_vao_a"));
+        var b = parseInt(prompt("nhap_vao_b"));
+        if (a % b == 0) {
+            alert("a chia hết cho b")
+        }
+        else {
+            alert("a không chia hết cho b");
+        }
+
+
+
+        //  Nhập tuổi và in ra kết quả nếu tuổi học sinh đó không đủ điều kiện vào học lớp 10.
+        var tuoi = parseInt(prompt("nhap_vao_so_tuoi"));
+        if (tuoi >= 16) {
+            alert("Đủ điều kiện vào học lớp 10");
+        }
+        else {
+            alert("Không đủ điều kiện vào học lớp 10");
+        }
+        
+
+
+
+        // Nhập một số nguyên bất kỳ và in kết quả ra màn hình để nói cho người dùng biết số đó là lớn hay nhỏ hơn 0
+        var a = parseInt(prompt("nhap_vao_a"));
+        switch (true) {
+            case a > 0:
+                alert("số lớn hơn 0");
+                break;
+            case a < 0:
+                alert("số bé hơn 0");
+                break;
+            default:
+                alert("số bằng 0");
+                break;
+        }
+
+
+
+        //Nhập 3 số nguyên và tìm giá trị lớn nhất của ba số nguyên đó
+        var a = parseInt(prompt("nhap_vao_a"));
+        var b = parseInt(prompt("nhap_vao_b"));
+        var c = parseInt(prompt("nhap_vao_c"));
+        switch (true) {
+            case a > b && a > c:
+                alert("giá trị lớn nhất" + a);
+                break;
+            case b > a && b > c:
+                alert("giá trị lớn nhất" + b);
+                break;
+            case c > a && c > b:
+                alert("giá trị lớn nhất" + c);
+                break;
+            default: alert(a, b, c);
+                break;
+        }
+        
+
+
+        // Xếp hạng học lực của học sinh dựa trên các điểm bài kiểm tra, điểm thi giữa kỳ, điểm thi cuối kỳ
+        var diembaikiemtra = parseInt(prompt("nhap_vao_diem_bai_kiem_tra"));
+        var diemgiuaky = parseInt(prompt("nhap_vao_diem_giua_ky"));
+        var diemcuoiki = parseInt(prompt("nhap_vao_diem_cuoi_ky"));
+        switch (true) {
+            case diembaikiemtra >= 8 && diemgiuaky >= 8 && diemcuoiki >= 8:
+                alert("Xếp loại học sinh giỏi")
+                break;
+            case diembaikiemtra < 8 && diemgiuaky < 8 && diemcuoiki < 8 &&
+                diembaikiemtra > 6 && diemgiuaky > 6 && diemcuoiki > 6:
+                alert("Xếp loại học sinh khá")
+                break;
+
+            default: alert("Xếp loại học sinh trung bình")
+                break;
+        }
+
+
+
+        // Tính hoa hồng nhận được tuỳ theo mức doanh số bán hàng
+        var doanhso = parseInt(prompt("nhap_vao_doanh_so"));
+        var rose = 0;
+        if (doanhso <= 100) {
+            rose = doanhso * 0.01;
+            alert("hoa hồng nhận được =" + rose);
+        }
+        else if (doanhso <= 500 && doanhso > 100) {
+            rose = doanhso * 0.05;
+            alert("hoa hồng nhận được =" + rose);
+        }
+        else if (doanhso <= 1000 && doanhso > 500) {
+            rose = doanhso * 0.1;
+            alert("hoa hồng nhận được =" + rose);
+        }
+        else {
+            rose = doanhso * 0.5;
+            alert("hoa hồng nhận được =" + rose);
+        }
+    </script>
+
+
+
+
+    <!-- Tính cước điện thoại cho một hộ gia đình với các thông số đã cho -->
+    <label for="time">Tổng thời gian gọi :</label>
+    <input type="number" id="number1" value=""><br>
+
+    <label for="sms">Tổng SMS :</label>
+    <input type="number" id="number2" value=""><br>
+    <button onclick="result()" id="result">result</button>
+
+    <p id="tong_cuoc"></p>
+    <script>
+        function result() {
+            var time = parseInt(document.getElementById("number1").value);
+            var sms = parseInt(document.getElementById("number2").value);
+            var tongcuoc = (time * 2500) + (sms * 250);
+
+            console.log(tongcuoc);
+            document.getElementById("tong_cuoc").innerHTML = "Tổng cước phát sinh: " + tongcuoc;
+
+        }
+    </script>
+
+
+
+
+
+</body>
+
+</html>

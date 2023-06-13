@@ -13,24 +13,32 @@
         <input type="number" id="amount" min="0"><br>
         <label for="chuyendoi1">From Currency</label>
         <select name="donvi1" id="from_currency">
-            <option value="vnd" id="VND">vnd</option>
-            <option value="usd" id="USD">usd</option>
+            <option value="vnd">vnd</option>
+            <option value="usd">usd</option>
         </select>
         <label for="chuyendoi2">To Currency</label>
         <select name="donvi2" id="to_currency">
-            <option value="vnd" id="VND">vnd</option>
-            <option value="usd" id="USD">usd</option>
+            <option value="vnd">vnd</option>
+            <option value="usd">usd</option>
         </select>
         <button onclick="button1()">convert</button>
+        <p id="result"></p>
         <script>
-            var amount = parseInt(document.getElementById("amount").value);
-            var from_currency = parseInt(document.getElementById("from_currency").value);
-            var to_currency = parseInt(document.getElementById("to_currency").value);
-            
-           
-                    
-            
-
+            function button1() {
+                var amount = parseFloat(document.getElementById("amount").value);
+                var from_currency = document.getElementById("from_currency").value;
+                var to_currency = document.getElementById("to_currency").value;
+                var tygia = 23000;
+                var ketqua1 = amount * tygia;
+                var ketqua2 = amount / tygia;
+                if (from_currency === "vnd" && to_currency === "usd") {
+                    // document.getElementById("result").innerHTML = 'kết quả = ' + ketqua2;
+                    document.write(ketqua1)
+                }
+                else if (from_currency === "usd" && to_currency === "vnd") {
+                    document.write(ketqua1)
+                }
+            }
         </script>
     </form>
 

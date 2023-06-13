@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="time">Tổng thời gian gọi :</label>
+    <input type="number" id="number1" value=""><br>
+
+    <label for="sms">Tổng SMS :</label>
+    <input type="number" id="number2" value=""><br>
+    <button onclick="result()" id="result">result</button>
+
+    <p id="tong_cuoc"></p>
+    <script>
+        function result() {
+            var time = parseInt(document.getElementById("number1").value);
+            var sms = parseInt(document.getElementById("number2").value);
+            var tongcuoc = (time * 2500) + (sms * 250);
+
+            console.log(tongcuoc);
+            document.getElementById("tong_cuoc").innerHTML = "Tổng cước phát sinh: " + tongcuoc;
+
+        }
+    </script>
+</body>
+</html>
