@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // Chuyển từ độ C sang độ F.
+        // var nhietdo = parseInt(prompt("Nhập nhiệt độ (°C)"));
+        // var F = nhietdo * 9 / 5 + 32;
+        // alert(F + "°F");
+
+
+
+        //Chuyển từ mét sang feet
+        // var m = parseInt(prompt("Nhập số liệu(m)"));
+        // var ft = m * 3.2808;
+        // alert("kết quả = "+ ft + " feet")
+
+
+
+        //Tính diện tích hình vuông khi biết cạnh a.
+        // var a = parseInt(prompt("Nhập cạnh a"));
+        // var svuong= a*2;
+        // alert("Diện tích hình vuông là : "+ svuong);
+
+
+
+        //Tính diện tích hình  chữ nhật khi biết 02 cạnh a, b
+        // var a = parseInt(prompt("Nhập cạnh a"));
+        // var b = parseInt(prompt("Nhập cạnh b"));
+        // var schunhat=(a+b)*2;
+        // alert("Diện tích chữ nhật là : "+ schunhat);
+
+
+
+        //Tính diện tích tam giác vuông khi biết 02 cạnh kề a, b
+        // var a = parseInt(prompt("Nhập cạnh kề a"));
+        // var b = parseInt(prompt("Nhập cạnh kề b"));
+        // var stamgiacvuong=0.5 * a * b;
+        // alert("Diện tích tam giác vuông là : "+ stamgiacvuong);
+
+
+
+        // Giải phương trình bậc 1. phương trình bậc một có dạng(ax+b=0)
+        //    var a = parseInt(prompt("Nhập số a"));
+        //    var b = parseInt(prompt("Nhập số b"));
+        //    if(b==-b){
+        //     var x= b/a;
+        //     alert("kết quả =" + x);
+        //    }
+        //    else{
+        //     var X= -b/a;
+        //     alert("kết quả =" + X);
+        //    }
+
+
+        //Giải phương trình bậc 2.
+
+
+
+        // Kiểm tra xem 3 số thực (a,b,c) nhập vào có phải là cạnh của một tam giác. Điều kiện để a,b,c là cạnh của một tam giác là:
+        // a, b, c > 0
+        // a + b > c
+        // b + c > a
+        // a + c > b
+        // var a = parseInt(prompt("Nhập số a"));
+        // var b = parseInt(prompt("Nhập số b"));
+        // var c = parseInt(prompt("Nhập số c"));
+        // if (a>0 && b>0 && c > 0 || (a+b)>c || (b+c)>a || (a+c)>a){
+        //     alert("a,b,c là cạnh của một tam giác");
+        // }
+        // else{
+        //     alert("a,b,c không phải là cạnh của một tam giác");
+        // }
+
+
+
+        //Viết chương trình tính giá điện.
+
+        // var a = parseInt(prompt("Nhập số điện"));
+        // var kw= 20000;
+        // var giadien= a*kw;
+        // alert("tổng tiền điện của bạn là :" + giadien +"VND");
+
+
+
+        // Viết chương trình tính thuế thu nhập cá nhân
+        // var a = parseInt(prompt("thu nhập tính thuế"));
+        // var heso = 0.1  ;
+        // var thuethunhap = a * heso;
+        // alert("tổng tiền thuế thu nhập của bạn là :" + thuethunhap + "VND");
+
+
+        //Viết chương trình tính lãi ngân hàng (lãi mẹ đẻ lãi con) khi biết số tiền ban đầu, số tháng cho vay và lãi xuất hàng tháng.
+        // var a = parseInt(prompt("số tiền ban đầu"));
+        function tinhLaiNganHang(sotien, sothang, laisuat) {
+            for (let i = 0; i < sothang; i++) {
+                sotien += sotien * (laisuat / 100);
+            }
+            return sotien;
+        }
+
+        // Nhập thông tin từ người dùng
+        let sotienBanDau = parseFloat(prompt("Nhập số tiền ban đầu: "));
+        let soThangChoVay = parseInt(prompt("Nhập số tháng cho vay: "));
+        let laiSuatHangThang = parseFloat(prompt("Nhập lãi suất hàng tháng (%): "));
+
+        // Gọi hàm tính lãi ngân hàng
+        let tongTien = tinhLaiNganHang(sotienBanDau, soThangChoVay, laiSuatHangThang);
+
+        // In kết quả
+        alert("Tổng số tiền sau " + soThangChoVay + " tháng là: " + tongTien.toFixed(2));
+
+
+    </script>
+</body>
+
+</html>
